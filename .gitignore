@@ -11,7 +11,5 @@ compressed.txt
 *.mk
 *.exe
 bmptk_*_stack.c
-w1-native
-w1-native/*
 _push.bat
 _pull.bat
