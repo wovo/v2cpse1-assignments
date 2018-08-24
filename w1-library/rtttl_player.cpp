@@ -1,4 +1,11 @@
-#include "hwlib.hpp"
+#ifdef BMPTK_TARGET
+   #include "hwlib.hpp"
+   #define COUT hwlib::cout
+#else
+   #include <iostream>
+   #define HWLIB_TRACE std::cout << "\n" << std::flush
+   #define COUT std::cout
+#endif
 #include "rtttl_player.hpp"
 
 bool is_digit( char c ){ return ( c >= '0' ) && ( c <= '9' ); }
@@ -20,7 +27,7 @@ void rtttl_play( note_player & lsp, const char *s ){
             if( c == ':' ){
                state = 1;
             } else {
-               hwlib::cout << c;
+               COUT << c;
             } 
             break;
                
@@ -150,4 +157,5 @@ void rtttl_play( note_player & lsp, const char *s ){
       }         
    }
    HWLIB_TRACE << "done";
+   HWLIB_TRACE;
 }   
