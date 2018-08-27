@@ -20,7 +20,7 @@ SEARCH  := ../w1-library
 build: native.exe
 
 native.exe: main.cpp ../w1-library/rtttl_player.cpp
-	g++ -I../w1-library ../w1-library/rtttl_player.cpp main.cpp -o native.exe
+	g++ -std=c++17 -I../w1-library ../w1-library/rtttl_player.cpp main.cpp -o native.exe
 
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
