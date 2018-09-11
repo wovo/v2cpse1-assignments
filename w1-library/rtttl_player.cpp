@@ -3,8 +3,8 @@
    #define COUT hwlib::cout
 #else
    #include <iostream>
-   #define HWLIB_TRACE std::cout << "\n" << std::flush
-   #define COUT std::cout
+   #define HWLIB_TRACE std::cerr << "\n" << std::flush
+   #define COUT std::cerr
 #endif
 #include "rtttl_player.hpp"
 
